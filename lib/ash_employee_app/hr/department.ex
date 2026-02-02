@@ -4,33 +4,32 @@ defmodule AshEmployeeApp.HR.Department do
     data_layer: AshPostgres.DataLayer
 
   postgres do
-    table "departments"
-    repo AshEmployeeApp.Repo
+    table("departments")
+    repo(AshEmployeeApp.Repo)
   end
 
   attributes do
-    uuid_primary_key :id
+    uuid_primary_key(:id)
 
     attribute :name, :string do
-      allow_nil? false
+      allow_nil?(false)
     end
   end
 
   actions do
-   create :create do
-    primary? true
-    accept [:name]
-  end
+    create :create do
+      primary?(true)
+      accept([:name])
+    end
 
-   defaults [:read, :update, :destroy]
+    defaults([:read, :update, :destroy])
   end
-
 
   relationships do
     has_many :employees, AshEmployeeApp.HR.Employee
   end
 
   aggregates do
-    count :employee_count, :employees
+    count(:employee_count, :employees)
   end
 end

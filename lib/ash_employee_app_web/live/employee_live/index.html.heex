@@ -1,0 +1,17 @@
+<h1 class="text-xl font-bold">Employees</h1>
+
+<ul>
+  <%= for emp <- @employees do %>
+    <li class="flex gap-4 my-2">
+      <span><%= emp.name %> | age: <%= emp.age %> | salary: <%= emp.salary %></span>
+
+      <button
+        phx-click="delete"
+        phx-value-id={emp.id}
+        class="text-red-600"
+      >
+        Delete
+      </button>
+    </li>
+  <% end %>
+</ul>

@@ -13,7 +13,6 @@ config :ash_employee_app,
 
 config :ash_employee_app, ash_domains: [AshEmployeeApp.HR]
 
-
 # Configure the endpoint
 config :ash_employee_app, AshEmployeeAppWeb.Endpoint,
   url: [host: "localhost"],
