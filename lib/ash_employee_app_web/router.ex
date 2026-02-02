@@ -18,6 +18,10 @@ defmodule AshEmployeeAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    
+    live "/monitoring/employees", EmployeeLive.Monitor
+    live "/monitoring/departments", DepartmentLive.Monitor
+    live "/hr/manage", HRLive.Manage
   end
 
   # Other scopes may use custom stacks.

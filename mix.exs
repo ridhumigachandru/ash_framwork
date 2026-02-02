@@ -68,7 +68,8 @@ defmodule AshEmployeeApp.MixProject do
       {:bandit, "~> 1.5"},
       {:ash, "~> 3.0"},
       {:ash_postgres, "~> 2.0"},
-      {:ash_phoenix, "~> 2.0"}
+      {:ash_phoenix, "~> 2.0"},
+      {:number, "~> 1.0.1"}
 
     ]
   end
